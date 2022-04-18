@@ -164,7 +164,7 @@ export const updateNoteAction = (id, title, content, category) => async (
     };
 
     const { data } = await axios.patch(
-      `${process.env.REACT_APP_API}/notes/update/${id}`,
+      `https://simplify-notes-server.herokuapp.com/api/notes/update/${id}`,
       { title, content, category },
       config
     );
